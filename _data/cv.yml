@@ -3,7 +3,7 @@ cv:
   label: Associate Professor of Applied Mathematics and Statistics
   email: tan.cao@sunykorea.ac.kr
   phone: +82-32-626-1912
-  url: https://tancao.org
+  website: https://tancao.org
   location: Incheon, Republic of Korea
   image: ""
   summary: >
@@ -18,13 +18,46 @@ cv:
       username: tancao1128
 
   address:
-    street: 119 Songdo Moonhwa-Ro, Room B524 Academic Building
+    street: Room B524 Academic Building, 119 Songdo Moonhwa-Ro
     city: Incheon
     region: Yeonsu-Gu
     postalCode: "21985"
     countryCode: KR
 
   sections:
+    Experience:
+      - company: SUNY Korea
+        position: Associate Professor & Undergraduate Program Director
+        location: Incheon, Republic of Korea
+        url: https://sunykorea.ac.kr
+        start_date: 2017
+        end_date: present
+        summary: >
+          Department of Applied Mathematics and Statistics. Affiliated with
+          Stony Brook University.
+        highlights:
+          - "Teach undergraduate courses in calculus, numerical analysis, discrete mathematics, operations research, and optimization."
+          - "Undergraduate Program Director: academic advising and course-registration support for AMS students."
+          - "Chair of the Committee on Evaluation of Faculty Work (CEFW)."
+          - "Supervised 7 undergraduate, 2 master, and 2 Ph.D. students, plus 1 postdoctoral researcher."
+
+      - company: Vietnamese-German University
+        position: Mathematics Lecturer
+        location: Ho Chi Minh City, Vietnam
+        start_date: 2016
+        end_date: 2017
+        summary: Foundation Year program — Language Department.
+        highlights:
+          - "Developed and taught mathematics courses in English for the Foundation Year program."
+
+      - company: Wayne State University
+        position: Graduate Teaching Assistant
+        location: Detroit, MI, USA
+        start_date: 2011
+        end_date: 2016
+        highlights:
+          - "Taught MAT/STA undergraduate courses while completing the Ph.D."
+
     Education:
       - institution: Wayne State University
         location: Detroit, MI, USA
@@ -60,76 +93,22 @@ cv:
           - "Advisor: Prof. Dieu T. Cong."
           - "University Monthly Scholarship for Excellent Students (2005–2008)."
 
-    Experience:
-      - company: SUNY Korea
-        position: Associate Professor & Undergraduate Program Director
-        location: Incheon, Republic of Korea
-        url: https://sunykorea.ac.kr
-        start_date: 2017
-        end_date: present
-        summary: >
-          Department of Applied Mathematics and Statistics. Affiliated with
-          Stony Brook University.
-        highlights:
-          - "Teach undergraduate courses in calculus, numerical analysis, discrete mathematics, operations research, and optimization."
-          - "Undergraduate Program Director: academic advising and course-registration support for AMS students."
-          - "Chair of the Committee on Evaluation of Faculty Work (CEFW)."
-          - "Supervised 7 undergraduate, 2 master, and 2 Ph.D. students, plus 1 postdoctoral researcher."
-
-      - company: Vietnamese-German University
-        position: Mathematics Lecturer
-        location: Ho Chi Minh City, Vietnam
-        start_date: 2016
-        end_date: 2017
-        summary: Foundation Year program — Language Department.
-        highlights:
-          - "Developed and taught mathematics courses in English for the Foundation Year program."
-
-      - company: Wayne State University
-        position: Graduate Teaching Assistant
-        location: Detroit, MI, USA
-        start_date: 2011
-        end_date: 2016
-        highlights:
-          - "Taught MAT/STA undergraduate courses while completing the Ph.D."
-
     Research Grants:
-      - title: NRF Basic Research Program (기본연구) — Principal Investigator
-        authors:
-          - "National Research Foundation of Korea"
-        date: 2020-06-01
-        awarder: National Research Foundation of Korea
-        summary: >
-          Project: Optimal Control of the Sweeping Process and Its Applications.
-          Total budget 165,000,000 KRW (June 1, 2020 – February 28, 2023).
+      - bullet: "**NRF 기본연구 (2020–2023)** — Principal Investigator, *National Research Foundation of Korea*. Project: *Optimal Control of the Sweeping Process and Its Applications*. Total budget: 165,000,000 KRW."
+      - bullet: "**NRF 기본연구B (2026–2030)** — Application submitted; currently under review, *National Research Foundation of Korea*."
 
-      - title: NRF Basic Research Program B (기본연구B) — Applied / Under Review
-        authors:
-          - "National Research Foundation of Korea"
-        date: 2026-01-01
-        awarder: National Research Foundation of Korea
-        summary: >
-          Grant application submitted for the 2026–2030 cycle; currently under
-          review.
-
-    Awards:
+    Honors and Awards:
       - title: Karl W. and Helen L. Folley Endowed Scholarship
-        authors:
-          - "Wayne State University"
         date: 2016
         awarder: Wayne State University
 
       - title: Karl W. and Helen L. Folley Endowed Scholarship
-        authors:
-          - "Wayne State University"
         date: 2015
         awarder: Wayne State University
 
       - title: Nomination for the Heberlein Excellence in Teaching Award (Graduate Students)
-        authors:
-          - "Department of Mathematics"
         date: 2015
-        awarder: Wayne State University
+        awarder: Wayne State University, Department of Mathematics
 
       - title: AMS Travel Grant Support
         date: 2015
@@ -143,66 +122,65 @@ cv:
         date: 2003
         awarder: Tran Dai Nghia High School for the Gifted
 
-    Research Interests:
+    Interests:
       - name: Optimization
         icon: fa-solid fa-tag
-        keywords: "Convex and nonsmooth optimization, optimization with differential inclusions"
+        keywords:
+          - Convex and nonsmooth optimization
+          - Optimization with differential inclusions
       - name: Optimal Control
         icon: fa-solid fa-tag
-        keywords: "Sweeping processes, free-time / variable-time problems, bilevel control, discrete approximations"
+        keywords:
+          - Sweeping processes
+          - Free-time and variable-time problems
+          - Bilevel control
+          - Discrete approximations
       - name: Variational Analysis
         icon: fa-solid fa-tag
-        keywords: "Generalized differentiation, normal cones, subdifferentials"
+        keywords:
+          - Generalized differentiation
+          - Normal cones
+          - Subdifferentials
       - name: Differential Inclusions
         icon: fa-solid fa-tag
-        keywords: "Maximal monotone operators, catching-up algorithm, sweeping processes"
+        keywords:
+          - Maximal monotone operators
+          - Catching-up algorithm
+          - Sweeping processes
       - name: Applications
         icon: fa-solid fa-tag
-        keywords: "Crowd motion, marine surface vehicles, robotics, mean-variance portfolio optimization, reinforcement learning"
+        keywords:
+          - Crowd motion
+          - Marine surface vehicles
+          - Robotics
+          - Mean-variance portfolio optimization
+          - Reinforcement learning
 
     Service:
-      - name: Reviewer
-        summary: >
-          Reviewer for Journal of Optimization Theory and Applications;
-          Applied Mathematics & Optimization; Set-Valued Analysis; Journal of
-          Global Optimization; Optimization Letters; Applied Mathematical
-          Modelling; Evolution Equations and Control Theory; Nonlinear
-          Differential Equations and Applications; Numerical Algorithms;
-          Acta Mathematica Scientia.
+      - bullet: "**Journal Reviewer:** *Journal of Optimization Theory and Applications*; *Applied Mathematics & Optimization*; *Set-Valued Analysis*; *Journal of Global Optimization*; *Optimization Letters*; *Applied Mathematical Modelling*; *Evolution Equations and Control Theory*; *Nonlinear Differential Equations and Applications*; *Numerical Algorithms*; *Acta Mathematica Scientia*."
+      - bullet: "**Conference organization:** Co-organizer and co-chair of two invited sessions on *Learning-Based Control* and *Sweeping Processes (I & II)* at the 60th IEEE Conference on Decision and Control (CDC 2021), Austin, Texas."
+      - bullet: "**University:** Chair of the Committee on Evaluation of Faculty Work (CEFW); Undergraduate Program Director, AMS."
 
-      - name: Conference Organization
-        summary: >
-          Co-organizer and co-chair of two invited sessions on Learning-Based
-          Control and Sweeping Processes (I & II) at the 60th IEEE Conference
-          on Decision and Control (CDC 2021), Austin, Texas.
-
-    Selected Talks:
-      - name: OVACT 2026 — Hanoi, Vietnam
-        summary: "Invited talk (Oct 2026)."
-      - name: Can Tho University, Vietnam
-        summary: "Invited seminar: The Fastest Path — From the Brachistochrone to Optimizing Crowd Dynamics (Dec 2025)."
-      - name: Workshop on Applied Mathematics 2025
-        summary: "Ton Duc Thang University, Khanh Hoa Campus, Vietnam — invited talk (Jul 2025)."
-      - name: International Conference on Control of State-Constrained Dynamical Systems
-        summary: "Padua, Italy (Sep 2024)."
-      - name: International Conference on Optimization and Variational Analysis with Applications
-        summary: "Hanoi, Vietnam (Jul 2023)."
-      - name: 60th IEEE Conference on Decision and Control (CDC 2021)
-        summary: "Austin, Texas — co-organizer and co-chair, sessions on Learning-Based Control and Sweeping Processes."
-      - name: International School and Workshop on Control of State-Constrained Dynamical Systems
-        summary: "Valparaíso, Chile (Sep 2019)."
+    Selected Talks and Conferences:
+      - bullet: "*OVACT 2026* — International Workshop on Optimization, Variational Analysis and Control Theory, Hanoi, Vietnam — invited talk (Oct 2026)."
+      - bullet: "Invited seminar: *The Fastest Path: From the Brachistochrone to Optimizing Crowd Dynamics*, Can Tho University, Vietnam (Dec 2025)."
+      - bullet: "*Workshop on Applied Mathematics 2025*, Ton Duc Thang University (Khanh Hoa Campus), Vietnam — invited talk (Jul 2025)."
+      - bullet: "*International Conference on Control of State-Constrained Dynamical Systems*, Padua, Italy (Sep 2024)."
+      - bullet: "*International Conference on Optimization and Variational Analysis with Applications*, Hanoi, Vietnam (Jul 2023)."
+      - bullet: "*60th IEEE Conference on Decision and Control (CDC 2021)*, Austin, Texas — co-organizer and co-chair, sessions on Learning-Based Control and Sweeping Processes I/II."
+      - bullet: "*International School and Workshop on Control of State-Constrained Dynamical Systems*, Valparaíso, Chile (Sep 2019)."
 
     Languages:
       - name: Vietnamese
-        summary: "Native speaker"
+        summary: Native speaker
       - name: English
-        summary: "Professional working proficiency"
+        summary: Professional working proficiency
       - name: French
-        summary: "Working proficiency"
+        summary: Working proficiency
 
     Certificates:
       - name: Applied Data Science Program
-        date: 2025-03-01
+        date: 2025
         issuer: MIT Professional Education
         icon: fa-solid fa-certificate
       - name: Optimal Control and Reinforcement Learning
@@ -214,6 +192,6 @@ cv:
       - name: AI Nanodegree / Deep RL Nanodegree
         issuer: Udacity
         icon: fa-solid fa-certificate
-      - name: Mathematics for Machine Learning; Agentic AI; Prompt Engineering
+      - name: Mathematics for Machine Learning, Agentic AI, Prompt Engineering
         issuer: Coursera
         icon: fa-solid fa-certificate

@@ -1,12 +1,13 @@
-# this file contains the social media links and usernames of the author
-# the socials will be displayed in the order they are defined here
-# for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
+# Social media links and usernames
+# Only fields with values will appear. Add more later by uncommenting and filling in.
 
-cv_pdf: /assets/pdf/CV_TanCao.pdf # path to your CV PDF file
-email: tan.cao@sunykorea.ac.kr # your email address
-github_username: tancao1128 # GitHub username
-linkedin_username: # your LinkedIn username (uncomment + fill if you have one)
-scholar_userid: # TODO: fill in your Google Scholar ID
-orcid_id: # TODO: fill in your ORCID iD (format: 0000-0000-0000-0000)
-researchgate_username: # TODO: fill in your ResearchGate username (e.g., Tan-Cao)
-rss_icon: true # comment this line to hide the RSS icon
+cv_pdf: /assets/pdf/CV_TanCao.pdf
+email: tan.cao@sunykorea.ac.kr
+github_username: tancao1128
+rss_icon: true
+
+# Uncomment and fill in when ready:
+# linkedin_username: # your-linkedin-handle
+# scholar_userid: # your Google Scholar ID (the part after "user=" in URL)
+# orcid_id: # 0000-0000-0000-0000
+# researchgate_username: # Tan-Cao

@@ -45,10 +45,10 @@ My research lies at the intersection of **applied analysis**, **optimization**, 
 
 I received my Ph.D. in Applied Mathematics from **Wayne State University** (Detroit, MI, USA), where I worked under the supervision of Prof. **Boris Mordukhovich**. Prior to that, I completed my M.S. in Mathematics at the **University of Orléans** (France) and my B.S. in Mathematics at **HCMC University of Pedagogy** (Vietnam).
 
-### Current Grants
+### Research Grants
 
-- **NRF 2026 기본연구B** — Principal Investigator, *National Research Foundation of Korea* (2026–2030)
-- **NRF 2020 기본연구** — Principal Investigator (2020–2023)
+- **NRF 기본연구 (2020–2023)** — Principal Investigator, *National Research Foundation of Korea*. Project: *Optimal Control of the Sweeping Process and Its Applications*. Total budget: 165,000,000 KRW.
+- **NRF 기본연구B (2026–2030)** — Applied; under review, *National Research Foundation of Korea*.
 
 ### Service
 

@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-🎉 Awarded the **NRF 2026 기본연구B grant** (2026–2030) as Principal Investigator, supporting our research on sweeping processes and applications.
+📋 Submitted application for the **NRF 2026 기본연구B grant** (2026–2030) on research in sweeping processes and applications; currently under review.

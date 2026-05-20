@@ -43,7 +43,7 @@ My research lies at the intersection of **applied analysis**, **optimization**, 
 
 ### Education
 
-I received my Ph.D. in Applied Mathematics from **Wayne State University** (Detroit, MI, USA), where I worked under the supervision of Prof. **Boris Mordukhovich**. Prior to that, I completed my master's degree at the **AGH University of Science and Technology** (Kraków, Poland) and my undergraduate studies at **Vietnam National University** (Ho Chi Minh City, Vietnam).
+I received my Ph.D. in Applied Mathematics from **Wayne State University** (Detroit, MI, USA), where I worked under the supervision of Prof. **Boris Mordukhovich**. Prior to that, I completed my M.S. in Mathematics at the **University of Orléans** (France) and my B.S. in Mathematics at **HCMC University of Pedagogy** (Vietnam).
 
 ### Current Grants
 
@@ -52,8 +52,8 @@ I received my Ph.D. in Applied Mathematics from **Wayne State University** (Detr
 
 ### Service
 
-I serve as a reviewer for several international journals in optimization, control, and applied mathematics, including *SIAM Journal on Control and Optimization*, *Journal of Optimization Theory and Applications*, *Optimization*, *Set-Valued and Variational Analysis*, among others.
+I serve as a reviewer for several international journals in optimization, control, and applied mathematics, including *Journal of Optimization Theory and Applications*, *Applied Mathematics & Optimization*, *Set-Valued Analysis*, *Journal of Global Optimization*, *Optimization Letters*, *Applied Mathematical Modelling*, *Evolution Equations and Control Theory*, *Nonlinear Differential Equations and Applications*, *Numerical Algorithms*, and *Acta Mathematica Scientia*.
 
 ---
 
-📄 Download my [Curriculum Vitae](/assets/pdf/CV_TanCao.pdf) · 🎓 [Google Scholar](https://scholar.google.com/citations?user=YourScholarID) · 🔬 [ORCID](https://orcid.org/0000-0000-0000-0000)
+📄 Download my [Curriculum Vitae](/assets/pdf/CV_TanCao.pdf)

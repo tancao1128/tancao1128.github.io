@@ -1,7 +1,7 @@
 ---
 layout: course
 title: "AMS 326 — Numerical Analysis"
-description: Numerical methods for the standard problems of scientific computing: root finding, interpolation, quadrature, linear systems, and ordinary differential equations.
+description: "Numerical methods for the standard problems of scientific computing: root finding, interpolation, quadrature, linear systems, and ordinary differential equations."
 instructor: Prof. Tan H. Cao
 year: 2026
 term: Spring

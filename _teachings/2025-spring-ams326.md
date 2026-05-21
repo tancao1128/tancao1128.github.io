@@ -1,7 +1,7 @@
 ---
 layout: course
 title: "AMS 326 — Numerical Analysis"
-description: Core numerical methods of scientific computing: root finding, interpolation, quadrature, linear systems, and ODEs — with Python implementations.
+description: "Core numerical methods of scientific computing: root finding, interpolation, quadrature, linear systems, and ODEs — with Python implementations."
 instructor: Prof. Tan H. Cao
 year: 2025
 term: Spring

@@ -449,7 +449,17 @@ ninja.data = [{
           section: "News",},{id: "news-paper-accepted-in-nonlinear-analysis-hybrid-systems-optimal-control-of-nonconvex-sweeping-processes-with-variable-time-via-finite-difference-approximations-with-b-s-mordukhovich-d-nguyen-t-nguyen-n-n-thieu",
           title: '🎉 Paper accepted in Nonlinear Analysis: Hybrid Systems — Optimal Control of Nonconvex...',
           description: "",
-          section: "News",},{id: "projects-optimal-control-of-sweeping-processes",
+          section: "News",},{id: "projects-ug-from-lagrange-multipliers-to-discrete-pontryagin",
+          title: 'UG: From Lagrange Multipliers to Discrete Pontryagin',
+          description: "Climb the ladder from constrained calculus to optimal control&#39;s necessary conditions using only multivariable calculus and a willingness to write down chain rules carefully.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/10_ug-pontryagin/";
+            },},{id: "projects-ug-from-gridworld-mdp-to-crowd-evacuation",
+          title: 'UG: From Gridworld MDP to Crowd Evacuation',
+          description: "Start with the Bellman equation as a linear system on a 5×5 grid and end with a continuous-space multi-agent crowd evacuation simulator — touching every concept that bridges classical dynamic programming to modern reinforcement learning.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/11_ug-gridworld-crowd/";
+            },},{id: "projects-optimal-control-of-sweeping-processes",
           title: 'Optimal Control of Sweeping Processes',
           description: "Discrete approximations, optimality conditions, and applications of Moreau&#39;s sweeping process and its controlled variants.",
           section: "Projects",handler: () => {
@@ -489,6 +499,11 @@ ninja.data = [{
           description: "Implement Moreau&#39;s catching-up algorithm in Python and experimentally verify the error bounds for several test problems.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/8_ug-numerical-analysis/";
+            },},{id: "projects-ug-bouncing-ball-in-a-moving-polygon",
+          title: 'UG: Bouncing Ball in a Moving Polygon',
+          description: "Implement a ball constrained to live inside a deforming polygon using only linear algebra — and discover, along the way, that you&#39;ve coded a sweeping process.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/9_ug-bouncing-ball/";
             },},{id: "teachings-data-science-fundamentals",
           title: 'Data Science Fundamentals',
           description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",

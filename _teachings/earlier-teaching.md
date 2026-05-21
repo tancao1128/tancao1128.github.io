@@ -13,14 +13,14 @@ course_id: earlier-teaching
 
 Taught a range of undergraduate AMS courses across many semesters, including:
 
-- **AMS 161** — Applied Calculus II (integral calculus, sequences, series)
-- **AMS 210** — Applied Linear Algebra (matrices, eigenvalues, vector spaces)
-- **AMS 261** — Applied Calculus III (multivariable calculus)
+- [**AMS 161**](https://www.stonybrook.edu/commcms/ams/academics/undergraduate/_courses/ams161.php) — Applied Calculus II (integral calculus, sequences, series)
+- [**AMS 210**](https://www.stonybrook.edu/commcms/ams/academics/undergraduate/_courses/ams210.php) — Applied Linear Algebra (matrices, eigenvalues, vector spaces)
+- [**AMS 261**](https://www.stonybrook.edu/commcms/ams/academics/undergraduate/_courses/ams261) — Applied Calculus III (multivariable calculus)
 - **AMS 261-REC** — Recitation sections for Applied Calculus III
-- **AMS 301** — Finite Mathematical Structures (discrete mathematics)
-- **AMS 326** — Numerical Analysis
-- **AMS 341** — Operations Research I (deterministic models)
-- **AMS 361** — Applied Calculus IV (differential equations)
+- [**AMS 301**](https://www.stonybrook.edu/commcms/ams/undergraduate/_courses/ams301.php) — Finite Mathematical Structures (discrete mathematics)
+- [**AMS 326**](https://www.stonybrook.edu/commcms/ams/academics/undergraduate/_courses/ams326) — Numerical Analysis
+- [**AMS 341**](https://www.stonybrook.edu/commcms/ams/academics/undergraduate/_courses/ams341) — Operations Research I (deterministic models)
+- [**AMS 361**](https://www.stonybrook.edu/commcms/ams/academics/undergraduate/_courses/ams361.php) — Applied Calculus IV (differential equations)
 
 ## Vietnamese-German University (Fall 2016)
 

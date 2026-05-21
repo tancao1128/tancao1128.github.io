@@ -9,6 +9,8 @@ location: SUNY Korea
 course_id: ams301-2025-spring
 ---
 
+🔗 **Official course page (Stony Brook AMS):** [AMS 301 — Finite Mathematical Structures](https://www.stonybrook.edu/commcms/ams/undergraduate/_courses/ams301.php)
+
 ## Course overview
 
 A first course in discrete mathematics. Develops counting techniques, graph-theoretic reasoning, and recursive thinking — the foundational tools for theoretical computer science and operations research.

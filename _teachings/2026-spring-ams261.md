@@ -9,6 +9,8 @@ location: SUNY Korea
 course_id: ams261-2026-spring
 ---
 
+🔗 **Official course page (Stony Brook AMS):** [AMS 261 — Applied Calculus III](https://www.stonybrook.edu/commcms/ams/academics/undergraduate/_courses/ams261)
+
 ## Course overview
 
 A standard third-semester calculus course covering multivariable differential and integral calculus, with applications to physics and engineering.

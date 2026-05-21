@@ -9,6 +9,8 @@ location: SUNY Korea
 course_id: ams326-2026-spring
 ---
 
+🔗 **Official course page (Stony Brook AMS):** [AMS 326 — Numerical Analysis](https://www.stonybrook.edu/commcms/ams/academics/undergraduate/_courses/ams326)
+
 ## Course overview
 
 An introductory course in numerical analysis. Students implement the core algorithms in Python (or MATLAB), analyze their convergence, and apply them to concrete scientific-computing problems.

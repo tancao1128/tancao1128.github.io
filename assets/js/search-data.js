@@ -46,7 +46,7 @@ ninja.data = [{
           },
         },{id: "nav-teaching",
           title: "teaching",
-          description: "Course materials, schedules, and resources for classes taught.",
+          description: "Courses taught at SUNY Korea (Department of Applied Mathematics and Statistics, 2017–present), with selected earlier teaching at Vietnamese-German University and Wayne State University.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/teaching/";
@@ -504,16 +504,51 @@ ninja.data = [{
           description: "Implement a ball constrained to live inside a deforming polygon using only linear algebra — and discover, along the way, that you&#39;ve coded a sweeping process.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_ug-bouncing-ball/";
-            },},{id: "teachings-data-science-fundamentals",
-          title: 'Data Science Fundamentals',
-          description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
+            },},{id: "teachings-ams-301-finite-mathematical-structures",
+          title: 'AMS 301 — Finite Mathematical Structures',
+          description: "Combinatorics, graph theory, recurrence relations, and discrete probability — discrete-mathematics foundations for CS and operations research.",
           section: "Teachings",handler: () => {
-              window.location.href = "/teachings/data-science-fundamentals/";
-            },},{id: "teachings-introduction-to-machine-learning",
-          title: 'Introduction to Machine Learning',
-          description: "This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.",
+              window.location.href = "/teachings/2024-fall-ams301/";
+            },},{id: "teachings-ams-341-operations-research-i-deterministic-models",
+          title: 'AMS 341 — Operations Research I: Deterministic Models',
+          description: "Linear programming, the simplex method, duality, sensitivity analysis, integer programming, and network flows.",
           section: "Teachings",handler: () => {
-              window.location.href = "/teachings/introduction-to-machine-learning/";
+              window.location.href = "/teachings/2024-fall-ams341/";
+            },},{id: "teachings-ams-261-applied-calculus-iii",
+          title: 'AMS 261 — Applied Calculus III',
+          description: "Multivariable calculus — partial derivatives, multiple integrals, vector calculus, and Green/Stokes/Gauss theorems.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/2025-fall-ams261/";
+            },},{id: "teachings-ams-361-applied-calculus-iv-differential-equations",
+          title: 'AMS 361 — Applied Calculus IV: Differential Equations',
+          description: "First- and second-order ordinary differential equations, linear systems, Laplace transforms, and series solutions, with engineering applications.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/2025-fall-ams361/";
+            },},{id: "teachings-ams-301-finite-mathematical-structures",
+          title: 'AMS 301 — Finite Mathematical Structures',
+          description: "Combinatorics, graph theory, recurrence relations, generating functions, and discrete probability — the discrete-mathematics foundation for computer science and operations research.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/2025-spring-ams301/";
+            },},{id: "teachings-",
+          title: '',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/2025-spring-ams326/";
+            },},{id: "teachings-ams-261-applied-calculus-iii-multivariable-calculus",
+          title: 'AMS 261 — Applied Calculus III: Multivariable Calculus',
+          description: "Vector geometry, partial derivatives, multiple integrals, line and surface integrals, and the classical theorems of Green, Stokes, and Gauss.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/2026-spring-ams261/";
+            },},{id: "teachings-",
+          title: '',
+          description: "",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/2026-spring-ams326/";
+            },},{id: "teachings-earlier-teaching-2012-2023",
+          title: 'Earlier Teaching (2012–2023)',
+          description: "A summary of teaching at SUNY Korea (2017–2023), Vietnamese-German University (2016), and Wayne State University (2012–2016, as a graduate teaching assistant).",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/earlier-teaching/";
             },},{
         id: 'social-cv',
         title: 'CV',

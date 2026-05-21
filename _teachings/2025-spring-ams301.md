@@ -9,7 +9,7 @@ location: SUNY Korea
 course_id: ams301-2025-spring
 ---
 
-🔗 **Official course page (Stony Brook AMS):** [AMS 301 — Finite Mathematical Structures](https://www.stonybrook.edu/commcms/ams/undergraduate/_courses/ams301.php)
+🔗 **Official course page (Stony Brook AMS):** [AMS 301 — Finite Mathematical Structures](https://www.stonybrook.edu/ams/academics/undergraduate/ug-courses/ams-301.html)
 
 ## Course overview
 

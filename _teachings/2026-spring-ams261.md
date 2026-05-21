@@ -9,7 +9,7 @@ location: SUNY Korea
 course_id: ams261-2026-spring
 ---
 
-🔗 **Official course page (Stony Brook AMS):** [AMS 261 — Applied Calculus III](https://www.stonybrook.edu/commcms/ams/academics/undergraduate/_courses/ams261)
+🔗 **Official course page (Stony Brook AMS):** [AMS 261 — Applied Calculus III](https://www.stonybrook.edu/ams/academics/undergraduate/ug-courses/ams-261.html)
 
 ## Course overview
 

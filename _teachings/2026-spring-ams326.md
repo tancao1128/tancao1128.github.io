@@ -9,7 +9,7 @@ location: SUNY Korea
 course_id: ams326-2026-spring
 ---
 
-🔗 **Official course page (Stony Brook AMS):** [AMS 326 — Numerical Analysis](https://www.stonybrook.edu/commcms/ams/academics/undergraduate/_courses/ams326)
+🔗 **Official course page (Stony Brook AMS):** [AMS 326 — Numerical Analysis](https://www.stonybrook.edu/ams/academics/undergraduate/ug-courses/ams-326.html)
 
 ## Course overview
 

@@ -529,9 +529,9 @@ ninja.data = [{
           description: "Combinatorics, graph theory, recurrence relations, generating functions, and discrete probability — the discrete-mathematics foundation for computer science and operations research.",
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/2025-spring-ams301/";
-            },},{id: "teachings-",
-          title: '',
-          description: "",
+            },},{id: "teachings-ams-326-numerical-analysis",
+          title: 'AMS 326 — Numerical Analysis',
+          description: "Core numerical methods of scientific computing: root finding, interpolation, quadrature, linear systems, and ODEs — with Python implementations.",
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/2025-spring-ams326/";
             },},{id: "teachings-ams-261-applied-calculus-iii-multivariable-calculus",
@@ -539,9 +539,9 @@ ninja.data = [{
           description: "Vector geometry, partial derivatives, multiple integrals, line and surface integrals, and the classical theorems of Green, Stokes, and Gauss.",
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/2026-spring-ams261/";
-            },},{id: "teachings-",
-          title: '',
-          description: "",
+            },},{id: "teachings-ams-326-numerical-analysis",
+          title: 'AMS 326 — Numerical Analysis',
+          description: "Numerical methods for the standard problems of scientific computing: root finding, interpolation, quadrature, linear systems, and ordinary differential equations.",
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/2026-spring-ams326/";
             },},{id: "teachings-earlier-teaching-2012-2023",

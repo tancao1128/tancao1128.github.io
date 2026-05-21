@@ -25,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-projects",
           title: "projects",
-          description: "A growing collection of your cool projects.",
+          description: "Research projects on optimization, control, and variational analysis, plus undergraduate research ideas for AMS 487 and prospective students at SUNY Korea.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -449,51 +449,46 @@ ninja.data = [{
           section: "News",},{id: "news-paper-accepted-in-nonlinear-analysis-hybrid-systems-optimal-control-of-nonconvex-sweeping-processes-with-variable-time-via-finite-difference-approximations-with-b-s-mordukhovich-d-nguyen-t-nguyen-n-n-thieu",
           title: '🎉 Paper accepted in Nonlinear Analysis: Hybrid Systems — Optimal Control of Nonconvex...',
           description: "",
-          section: "News",},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+          section: "News",},{id: "projects-optimal-control-of-sweeping-processes",
+          title: 'Optimal Control of Sweeping Processes',
+          description: "Discrete approximations, optimality conditions, and applications of Moreau&#39;s sweeping process and its controlled variants.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
+              window.location.href = "/projects/1_sweeping-processes/";
+            },},{id: "projects-catching-up-algorithm-for-differential-inclusions",
+          title: 'Catching-Up Algorithm for Differential Inclusions',
+          description: "Convergence, stability, and quantitative error bounds for discretizations of differential inclusions driven by maximal monotone operators.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/2_project/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
+              window.location.href = "/projects/2_catching-up/";
+            },},{id: "projects-crowd-motion-amp-marine-vehicle-control",
+          title: 'Crowd Motion &amp;amp; Marine Vehicle Control',
+          description: "Optimal control of nonconvex sweeping processes applied to pedestrian dynamics, evacuation, and autonomous marine surface vehicles.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/3_project/";
-            },},{id: "projects-project-4",
-          title: 'project 4',
-          description: "another without an image",
+              window.location.href = "/projects/3_crowd-motion/";
+            },},{id: "projects-ug-python-toolbox-for-optimal-control",
+          title: 'UG: Python Toolbox for Optimal Control',
+          description: "Build a small, well-documented Python toolbox that solves classic optimal-control problems (brachistochrone, LQR, simple sweeping process) and visualizes trajectories.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/4_project/";
-            },},{id: "projects-project-5",
-          title: 'project 5',
-          description: "a project with a background image",
+              window.location.href = "/projects/4_ug-python-control/";
+            },},{id: "projects-ug-reinforcement-learning-for-crowd-evacuation",
+          title: 'UG: Reinforcement Learning for Crowd Evacuation',
+          description: "Train an RL agent that learns to evacuate a simulated crowd from a room with obstacles in minimum time — a friendly entry point into RL and nonsmooth dynamics.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/5_project/";
-            },},{id: "projects-project-6",
-          title: 'project 6',
-          description: "a project with no image",
+              window.location.href = "/projects/5_ug-rl-evacuation/";
+            },},{id: "projects-ug-trajectory-planning-for-a-simulated-boat",
+          title: 'UG: Trajectory Planning for a Simulated Boat',
+          description: "Implement and visualize a free-time optimal navigation problem for an autonomous surface vehicle avoiding circular obstacles.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/6_project/";
-            },},{id: "projects-project-7",
-          title: 'project 7',
-          description: "with background image",
+              window.location.href = "/projects/6_ug-marine-control/";
+            },},{id: "projects-ug-policy-gradient-for-mean-variance-portfolio-optimization",
+          title: 'UG: Policy Gradient for Mean-Variance Portfolio Optimization',
+          description: "Reproduce a regime-switching financial market and train a policy-gradient agent to balance expected return and variance — a bridge between optimization, finance, and RL.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/7_project/";
-            },},{id: "projects-project-8",
-          title: 'project 8',
-          description: "an other project with a background image and giscus comments",
+              window.location.href = "/projects/7_ug-portfolio-rl/";
+            },},{id: "projects-ug-catching-up-algorithm-numerical-experiments",
+          title: 'UG: Catching-Up Algorithm — Numerical Experiments',
+          description: "Implement Moreau&#39;s catching-up algorithm in Python and experimentally verify the error bounds for several test problems.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/8_project/";
-            },},{id: "projects-project-9",
-          title: 'project 9',
-          description: "another project with an image 🎉",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/9_project/";
+              window.location.href = "/projects/8_ug-numerical-analysis/";
             },},{id: "teachings-data-science-fundamentals",
           title: 'Data Science Fundamentals',
           description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",

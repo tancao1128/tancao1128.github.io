@@ -459,6 +459,11 @@ ninja.data = [{
           description: "Start with the Bellman equation as a linear system on a 5×5 grid and end with a continuous-space multi-agent crowd evacuation simulator — touching every concept that bridges classical dynamic programming to modern reinforcement learning.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/11_ug-gridworld-crowd/";
+            },},{id: "projects-ug-flow-matching-learning-to-turn-noise-into-data-with-odes",
+          title: 'UG: Flow Matching — Learning to Turn Noise into Data with ODEs',
+          description: "Build a modern generative model from scratch using nothing but vector fields, ODEs, and a willingness to follow a particle along a straight line. A gentle on-ramp from multivariable calculus to the math behind today&#39;s image and robotics generative models.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/12_ug-flow-matching/";
             },},{id: "projects-optimal-control-of-sweeping-processes",
           title: 'Optimal Control of Sweeping Processes',
           description: "Discrete approximations, optimality conditions, and applications of Moreau&#39;s sweeping process and its controlled variants.",

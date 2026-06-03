@@ -13,7 +13,7 @@ profile:
     <p>119 Songdo Moonhwa-Ro</p>
     <p>Yeonsu-Gu, Incheon, Korea 21985</p>
     <p>☎ +82-32-626-1912</p>
-    <p>✉ tan.cao [at] sunykorea.ac.kr</p>
+    <p>✉ tan.cao [at] stonybrook.edu</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page

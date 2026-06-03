@@ -179,6 +179,10 @@ cv:
         summary: Working proficiency
 
     Certificates:
+      - name: Agentic AI
+        date: 2026
+        issuer: DeepLearning.AI
+        icon: fa-solid fa-certificate
       - name: Applied Data Science Program
         date: 2025
         issuer: MIT Professional Education
@@ -192,6 +196,6 @@ cv:
       - name: AI Nanodegree / Deep RL Nanodegree
         issuer: Udacity
         icon: fa-solid fa-certificate
-      - name: Mathematics for Machine Learning, Agentic AI, Prompt Engineering
+      - name: Mathematics for Machine Learning, Prompt Engineering
         issuer: Coursera
         icon: fa-solid fa-certificate

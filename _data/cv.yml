@@ -179,13 +179,13 @@ cv:
         summary: Working proficiency
 
     Certificates:
-      - name: Agentic AI
-        date: 2026
-        issuer: DeepLearning.AI
-        icon: fa-solid fa-certificate
       - name: Applied Data Science Program
         date: 2025
         issuer: MIT Professional Education
+        icon: fa-solid fa-certificate
+      - name: Agentic AI
+        date: 2026
+        issuer: DeepLearning.AI
         icon: fa-solid fa-certificate
       - name: Optimal Control and Reinforcement Learning
         issuer: Carnegie Mellon University
@@ -193,9 +193,31 @@ cv:
       - name: Deep Reinforcement Learning
         issuer: Hugging Face
         icon: fa-solid fa-certificate
-      - name: AI Nanodegree / Deep RL Nanodegree
+      - name: Artificial Intelligence Nanodegree
         issuer: Udacity
+        url: https://www.dropbox.com/s/wdzb7afk32kyc4k/AI%20Certificate.pdf?dl=0
         icon: fa-solid fa-certificate
-      - name: Mathematics for Machine Learning, Prompt Engineering
+      - name: Deep Reinforcement Learning Nanodegree
+        issuer: Udacity
+        url: https://www.dropbox.com/s/66sqans55rgifpy/Deep%20RL%20Certficate.pdf?dl=0
+        icon: fa-solid fa-certificate
+      - name: Introduction to Programming Nanodegree
+        issuer: Udacity
+        url: https://www.dropbox.com/s/zafxc5z7hkt26ft/Intro%20to%20Programming%20Nanodegree.pdf?dl=0
+        icon: fa-solid fa-certificate
+      - name: Learning How to Learn
+        issuer: Coursera
+        url: https://www.coursera.org/account/accomplishments/verify/D4AHHNMFYJMQ
+        icon: fa-solid fa-certificate
+      - name: "Mindshift: Break Through Obstacles to Learning"
+        issuer: Coursera
+        url: https://www.coursera.org/account/accomplishments/verify/ZEU38KY26LXM
+        icon: fa-solid fa-certificate
+      - name: Control of Mobile Robots
+        issuer: Coursera
+        url: https://www.coursera.org/account/accomplishments/verify/F6ZJ84U52MVY
+        icon: fa-solid fa-certificate
+      - name: "Selected Coursera courses (2025–2026): Maximize Productivity With AI Tools (Google), Discover the Art of Prompting (Google), Introduction to AI (Google), Agentic AI and AI Agents, ChatGPT Prompt Engineering for Developers, Innovative Teaching with ChatGPT, Mathematics for Machine Learning: Multivariate Calculus"
+        date: 2026
         issuer: Coursera
         icon: fa-solid fa-certificate

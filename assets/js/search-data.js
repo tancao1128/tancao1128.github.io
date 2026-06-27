@@ -506,7 +506,7 @@ ninja.data = [{
               window.location.href = "/projects/8_ug-numerical-analysis/";
             },},{id: "projects-ug-bouncing-ball-in-a-moving-polygon",
           title: 'UG: Bouncing Ball in a Moving Polygon',
-          description: "Implement a ball constrained to live inside a deforming polygon using only linear algebra — and discover, along the way, that you&#39;ve coded a sweeping process.",
+          description: "A first undergraduate research project on projections, constrained motion, and sweeping processes, starting from linear algebra and Python.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/9_ug-bouncing-ball/";
             },},{id: "teachings-ams-301-finite-mathematical-structures",

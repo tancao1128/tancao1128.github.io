@@ -9,6 +9,21 @@ display_categories: [research, undergraduate]
 horizontal: false
 ---
 
+<div class="card mb-4">
+  <div class="card-body">
+    <h2 class="h4 mt-0">Preparing for undergraduate research</h2>
+    <p class="mb-3">
+      Before choosing a project, review the recommended mathematics, computing,
+      optimization, and research-practice pathway for work in optimal control,
+      nonsmooth dynamics, robotics, traffic and crowd models, or safe reinforcement
+      learning.
+    </p>
+    <a class="btn btn-sm btn-outline-primary" href="/undergraduate-research/">
+      View the undergraduate research learning path
+    </a>
+  </div>
+</div>
+
 <!-- pages/projects.md -->
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}

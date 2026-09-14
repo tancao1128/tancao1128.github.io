@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hyperbolic paraboloid</title>
+<style>
+  html,body{margin:0;padding:0;background:#FAF9F5;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:#3A3A3A;}
+  #wrap{max-width:860px;margin:0 auto;padding:10px 12px 14px;}
+  h3{margin:2px 0 2px;font-size:16px;font-weight:700;}
+  #eqn{font-size:14px;margin:0 0 8px;}
+  #eqn b{color:#1f1f1f;}
+  #eqn .sign{color:#8A8A8A;font-size:12.5px;margin-left:8px;}
+  #row{display:flex;gap:12px;align-items:stretch;}
+  #left{flex:1 1 58%;min-width:0;display:flex;flex-direction:column;}
+  #right{flex:1 1 42%;min-width:0;display:flex;flex-direction:column;gap:8px;}
+  @media (max-width:600px){ #row{flex-direction:column;} }
+  #canvasHolder{width:100%;aspect-ratio:4/3;background:#FFFFFF;border:1px solid #ECEAE4;border-radius:6px;overflow:hidden;position:relative;touch-action:none;cursor:grab;}
+  #loadBtn{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#FFFFFF;border:0;font-size:14px;font-weight:600;color:#2f6fae;cursor:pointer;}
+  #loadBtn span{border:1px solid #2f6fae;border-radius:6px;padding:10px 16px;}
+  #controls{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin:8px 0 4px;font-size:12.5px;}
+  #controls label{display:flex;align-items:center;gap:5px;}
+  select,input[type=range]{font-size:12.5px;}
+  input[type=range]{width:90px;}
+  button.reset{font-size:12px;padding:3px 9px;border:1px solid #B9B6AC;background:#F3F2EC;border-radius:5px;cursor:pointer;}
+  #readout{font-size:12.5px;line-height:1.45;background:#F3F2EC;border:1px solid #ECEAE4;border-radius:6px;padding:7px 10px;}
+  #readout b{color:#1f1f1f;}
+  .photo{width:100%;border-radius:6px;border:1px solid #ECEAE4;display:block;}
+  .cap{font-size:12px;line-height:1.4;color:#3A3A3A;}
+  .desc{font-size:12.5px;line-height:1.45;}
+  .q{font-size:12.5px;line-height:1.45;background:#FFF8E1;border:1px solid #F0E2A8;border-radius:6px;padding:7px 10px;}
+  .q b{color:#1f1f1f;}
+  table{border-collapse:collapse;width:100%;font-size:12px;}
+  th,td{border:1px solid #ECEAE4;padding:4px 6px;text-align:left;}
+  th{background:#F3F2EC;font-weight:600;}
+  td.tr{color:#D64550;font-weight:600;}
+  .hint{font-size:11px;color:#8A8A8A;margin-top:6px;}
+  a{color:#2f6fae;}
+</style>
+</head>
+<body>
+<div id="wrap">
+  <h3>Hyperbolic paraboloid</h3>
+  <div id="eqn"><b>z = y²/b² − x²/a²</b><span class="sign">signs: one variable linear, squares of opposite sign</span></div>
+  <div id="row">
+    <div id="left">
+      <div id="canvasHolder"><button id="loadBtn" type="button"><span>Load the 3D model</span></button></div>
+      <div id="controls">
+        <label>a = <span id="aval">1.6</span><input id="aSlider" type="range" min="6" max="24" value="16" step="1"></label>
+        <label>b = <span id="bval">1.6</span><input id="bSlider" type="range" min="6" max="24" value="16" step="1"></label>
+        <label>c = <span id="cval">1.6</span><input id="cSlider" type="range" min="6" max="24" value="16" step="1"></label>
+      </div>
+      <div id="controls">
+        <label>Cutting plane:
+          <select id="axisSel">
+            <option value="z">z = k</option>
+            <option value="x">x = k</option>
+            <option value="y">y = k</option>
+          </select>
+        </label>
+        <label>k = <span id="kval">0.00</span><input id="kSlider" type="range" min="-300" max="300" value="0" step="5"></label>
+        <button class="reset" id="resetBtn" type="button">Reset</button>
+      </div>
+      <div id="readout">Load the model to start slicing.</div>
+      <div class="hint">Drag inside the figure to rotate. The bold red curve is the trace — the intersection of the surface with the cutting plane.</div>
+    </div>
+    <div id="right">
+      <div class="desc">One variable linear, and the two squared terms have opposite signs. The x = k traces are parabolas opening up, the y = k traces are parabolas opening down, and the horizontal traces are hyperbolas — a saddle.</div>
+      <table>
+        <tr><th colspan="2">Traces with the coordinate planes (current a, b, c)</th></tr>
+        <tr><td>x = 0</td><td class="tr" id="tx"></td></tr>
+        <tr><td>y = 0</td><td class="tr" id="ty"></td></tr>
+        <tr><td>z = 0</td><td class="tr" id="tz"></td></tr>
+      </table>
+      <div class="q"><b>Question.</b> Cut at z = 0 first: why are the traces two crossing lines rather than a hyperbola? Then compare x = 1 with y = 1 — the two parabolas open in opposite directions; which slider changes which one?</div>
+      <div class="cap">GeoGebra demo: <a href="https://www.geogebra.org/3d/nybjr2bp" target="_blank" rel="noopener">open the activity</a>.</div>
+    </div>
+  </div>
+</div>
+<script>
+const KIND='hypparab';
+const AUTOLOAD=false;
+const THREE_URL='https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+let a=1.6,b=1.6,c=1.6;
+const $=id=>document.getElementById(id);
+const axisSel=$('axisSel'), kSlider=$('kSlider'), kval=$('kval'), readout=$('readout');
+const aS=$('aSlider'), bS=$('bSlider'), cS=$('cSlider');
+
+// ---- pure math: trace of KIND with plane axis=k, using globals a,b,c (no THREE needed) ----
+function traceLabel(axis,k){
+  const eps=1e-6;
+  if(KIND==='ellipsoid'){
+    const rhs = axis==='z' ? 1-(k*k)/(c*c) : axis==='x' ? 1-(k*k)/(a*a) : 1-(k*k)/(b*b);
+    return rhs>eps ? 'an ellipse' : Math.abs(rhs)<=eps ? 'a single point' : 'empty (no real trace)';
+  }
+  if(KIND==='hyp1'){
+    if(axis==='z') return 'an ellipse (exists for every k)';
+    const rhs = axis==='x' ? 1-(k*k)/(a*a) : 1-(k*k)/(b*b);
+    return Math.abs(rhs)<eps ? 'two crossing lines' : 'a hyperbola';
+  }
+  if(KIND==='hyp2'){
+    if(axis==='z'){ const rhs=(k*k)/(c*c)-1; return rhs>eps ? 'an ellipse' : Math.abs(rhs)<=eps ? 'a single point (a vertex)' : 'empty — inside the gap between the sheets'; }
+    return 'a hyperbola (opens along z)';
+  }
+  if(KIND==='cone'){
+    if(axis==='z') return Math.abs(k)<eps ? 'a single point (the vertex)' : 'an ellipse';
+    return Math.abs(k)<eps ? 'two crossing lines' : 'a hyperbola';
+  }
+  if(KIND==='ellparab'){
+    if(axis==='z') return k>eps ? 'an ellipse' : Math.abs(k)<=eps ? 'a single point (the vertex)' : 'empty — the bowl opens upward only';
+    return 'a parabola';
+  }
+  if(KIND==='hypparab'){
+    if(axis==='z') return Math.abs(k)<eps ? 'two crossing lines' : 'a hyperbola';
+    return axis==='x' ? 'a parabola opening upward' : 'a parabola opening downward';
+  }
+}
+function implicitResidual(p){ // F(x,y,z) for the surface, 0 on the surface
+  const x=p.x,y=p.y,z=p.z;
+  if(KIND==='ellipsoid') return x*x/(a*a)+y*y/(b*b)+z*z/(c*c)-1;
+  if(KIND==='hyp1') return x*x/(a*a)+y*y/(b*b)-z*z/(c*c)-1;
+  if(KIND==='hyp2') return z*z/(c*c)-x*x/(a*a)-y*y/(b*b)-1;
+  if(KIND==='cone') return x*x/(a*a)+y*y/(b*b)-z*z/(c*c);
+  if(KIND==='ellparab') return z-(x*x/(a*a)+y*y/(b*b));
+  if(KIND==='hypparab') return z-(y*y/(b*b)-x*x/(a*a));
+}
+function updateTable(){ $('tx').textContent=traceLabel('x',0); $('ty').textContent=traceLabel('y',0); $('tz').textContent=traceLabel('z',0); }
+function readSliders(){ a=parseInt(aS.value)/10; b=parseInt(bS.value)/10; c=parseInt(cS.value)/10; $('aval').textContent=a.toFixed(1); $('bval').textContent=b.toFixed(1); $('cval').textContent=c.toFixed(1); }
+readSliders(); updateTable();
+
+// ---- 3D part, mounted on demand ----
+let mounted=false, rig=null, scene=null, camera=null, renderer=null, surfGroup=null, planeMesh=null, traceObj=null, samplePts=[];
+const AX=3.2;
+function mount(){
+  if(mounted) return; mounted=true;
+  const btn=$('loadBtn'); if(btn) btn.remove();
+  const s=document.createElement('script'); s.src=THREE_URL; s.onload=init3D; s.onerror=()=>{ readout.textContent='Could not load the 3D library (network). Reload the page to try again.'; mounted=false; };
+  document.head.appendChild(s);
+}
+function init3D(){
+  const holder=$('canvasHolder');
+  scene=new THREE.Scene(); scene.background=new THREE.Color(0xFFFFFF);
+  camera=new THREE.PerspectiveCamera(38,4/3,0.1,100);
+  renderer=new THREE.WebGLRenderer({antialias:true}); holder.appendChild(renderer.domElement);
+  function sizeRenderer(){ const w=holder.clientWidth,h=holder.clientHeight; renderer.setSize(w,h,false); camera.aspect=w/h; camera.updateProjectionMatrix(); }
+  window.addEventListener('resize',sizeRenderer);
+  rig=new THREE.Group(); scene.add(rig);
+  const light1=new THREE.DirectionalLight(0xffffff,0.9); light1.position.set(4,6,8); scene.add(light1);
+  scene.add(new THREE.AmbientLight(0xffffff,0.55));
+  camera.position.set(4.2,3.0,5.2); camera.lookAt(0,0,0);
+  function axisLine(dir,color){ const g=new THREE.BufferGeometry().setFromPoints([dir.clone().multiplyScalar(-AX),dir.clone().multiplyScalar(AX)]); return new THREE.Line(g,new THREE.LineBasicMaterial({color,transparent:true,opacity:0.55})); }
+  rig.add(axisLine(new THREE.Vector3(1,0,0),0x8A8A8A)); rig.add(axisLine(new THREE.Vector3(0,1,0),0x8A8A8A)); rig.add(axisLine(new THREE.Vector3(0,0,1),0x8A8A8A));
+  function makeLabel(text,pos,color){ const cnv=document.createElement('canvas'); cnv.width=64; cnv.height=64; const ctx=cnv.getContext('2d'); ctx.font='bold 40px sans-serif'; ctx.fillStyle=color; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillText(text,32,32); const spr=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(cnv),depthTest:false})); spr.scale.set(0.35,0.35,0.35); spr.position.copy(pos); return spr; }
+  rig.add(makeLabel('x',new THREE.Vector3(AX+0.25,0,0),'#3A3A3A')); rig.add(makeLabel('y',new THREE.Vector3(0,AX+0.25,0),'#3A3A3A')); rig.add(makeLabel('z',new THREE.Vector3(0,0,AX+0.25),'#3A3A3A'));
+  for(let t=-3;t<=3;t++){ if(t===0) continue; rig.add(makeLabel(String(t),new THREE.Vector3(t,-0.18,0),'#B9B6AC')); rig.add(makeLabel(String(t),new THREE.Vector3(-0.18,0,t),'#B9B6AC')); }
+  let dragging=false,lastX=0,lastY=0; window.__rotX=0.35; window.__rotY=-0.5;
+  function applyRot(){ rig.rotation.set(window.__rotX,window.__rotY,0); } applyRot();
+  function onDown(e){ dragging=true; const p=e.touches?e.touches[0]:e; lastX=p.clientX; lastY=p.clientY; }
+  function onMove(e){ if(!dragging) return; const p=e.touches?e.touches[0]:e; const dx=p.clientX-lastX,dy=p.clientY-lastY; lastX=p.clientX; lastY=p.clientY; window.__rotY+=dx*0.008; window.__rotX+=dy*0.008; window.__rotX=Math.max(-1.4,Math.min(1.4,window.__rotX)); applyRot(); e.preventDefault(); }
+  function onUp(){ dragging=false; }
+  renderer.domElement.addEventListener('mousedown',onDown); window.addEventListener('mousemove',onMove); window.addEventListener('mouseup',onUp);
+  renderer.domElement.addEventListener('touchstart',onDown,{passive:false}); renderer.domElement.addEventListener('touchmove',onMove,{passive:false}); renderer.domElement.addEventListener('touchend',onUp);
+  window.__applyRot=applyRot;
+  sizeRenderer(); rebuildAll();
+  (function animate(){ requestAnimationFrame(animate); renderer.render(scene,camera); })();
+}
+function paramSurface(){
+  // returns {param(u,v,sheet), uRange, vRange, double} or {grid:true, f(x,y), range}
+  if(KIND==='ellipsoid') return {param:(u,v)=>new THREE.Vector3(a*Math.sin(u)*Math.cos(v),b*Math.sin(u)*Math.sin(v),c*Math.cos(u)),uRange:[0,Math.PI],vRange:[0,2*Math.PI]};
+  if(KIND==='hyp1') return {param:(u,v)=>{const r=Math.sqrt(1+(u*u)/(c*c)); return new THREE.Vector3(a*r*Math.cos(v),b*r*Math.sin(v),u);},uRange:[-2.6,2.6],vRange:[0,2*Math.PI]};
+  if(KIND==='hyp2') return {double:true,param:(u,v,sheet)=>{const zs=sheet===0?1:-1; const r=Math.sqrt(Math.max(u*u-1,0)); return new THREE.Vector3(a*r*Math.cos(v),b*r*Math.sin(v),zs*c*u);},uRange:[1,Math.max(1.05,3.0/c)],vRange:[0,2*Math.PI]};
+  if(KIND==='cone') return {param:(u,v)=>new THREE.Vector3(a*u*Math.cos(v),b*u*Math.sin(v),c*u),uRange:[-3.0/c,3.0/c],vRange:[0,2*Math.PI]};
+  if(KIND==='ellparab') return {param:(u,v)=>new THREE.Vector3(a*u*Math.cos(v),b*u*Math.sin(v),u*u),uRange:[0,Math.sqrt(3.0)],vRange:[0,2*Math.PI]};
+  if(KIND==='hypparab') return {grid:true,f:(x,y)=>new THREE.Vector3(x,y,(y*y)/(b*b)-(x*x)/(a*a)),range:[-2.2,2.2]};
+}
+function gridGeom(fn,u0,u1,v0,v1,nu,nv,sheet){
+  const positions=[],indices=[]; samplePts=[];
+  for(let i=0;i<=nu;i++){ const u=u0+(u1-u0)*i/nu; for(let j=0;j<=nv;j++){ const v=v0+(v1-v0)*j/nv; const p=fn(u,v,sheet); positions.push(p.x,p.y,p.z); if((i*7+j*3)%11===0) samplePts.push(p); } }
+  for(let i=0;i<nu;i++){ for(let j=0;j<nv;j++){ const A0=i*(nv+1)+j,B0=A0+1,C0=A0+(nv+1),D0=C0+1; indices.push(A0,C0,B0,B0,C0,D0); } }
+  const g=new THREE.BufferGeometry(); g.setAttribute('position',new THREE.Float32BufferAttribute(positions,3)); g.setIndex(indices); g.computeVertexNormals(); return g;
+}
+function addMesh(group,g){
+  group.add(new THREE.Mesh(g,new THREE.MeshStandardMaterial({color:0x5B9BD5,transparent:true,opacity:0.55,side:THREE.DoubleSide,roughness:0.6,metalness:0.05})));
+  group.add(new THREE.LineSegments(new THREE.WireframeGeometry(g),new THREE.LineBasicMaterial({color:0x2f6fae,transparent:true,opacity:0.25})));
+}
+function buildSurface(){
+  const d=paramSurface(); const group=new THREE.Group(); const allSamples=[];
+  if(d.grid){ const [r0,r1]=d.range; addMesh(group,gridGeom((x,y)=>d.f(x,y),r0,r1,r0,r1,40,40)); allSamples.push(...samplePts); }
+  else if(d.double){ [0,1].forEach(s=>{ addMesh(group,gridGeom(d.param,d.uRange[0],d.uRange[1],d.vRange[0],d.vRange[1],40,40,s)); allSamples.push(...samplePts); }); }
+  else { addMesh(group,gridGeom(d.param,d.uRange[0],d.uRange[1],d.vRange[0],d.vRange[1],48,48)); allSamples.push(...samplePts); }
+  samplePts=allSamples; return group;
+}
+// ---- trace curves (THREE points) ----
+function traceCurves(axis,k){
+  const eps=1e-6; let curves=[];
+  const mapZ=(x,y)=>new THREE.Vector3(x,y,k), mapX=(y,z)=>new THREE.Vector3(k,y,z), mapY=(x,z)=>new THREE.Vector3(x,k,z);
+  const ell=(rx,ry,m)=>{ const p=[]; for(let i=0;i<=80;i++){ const t=i/80*2*Math.PI; p.push(m(rx*Math.cos(t),ry*Math.sin(t))); } return p; };
+  const hyp=(sign,c1,c2,rhs,m)=>{ const p=[]; for(let i=-40;i<=40;i++){ const s=i/40*3.2; let u,v; if(rhs>0){ v=s; u=sign*c1*Math.sqrt(rhs+(v*v)/(c2*c2)); } else { u=s; v=sign*c2*Math.sqrt(-rhs+(u*u)/(c1*c1)); } p.push(m(u,v)); } return p; };
+  const lines=(slope,m)=>{ const p1=[],p2=[]; for(let i=-40;i<=40;i++){ const s=i/40*3.2; p1.push(m(s,slope*s)); p2.push(m(s,-slope*s)); } return [p1,p2]; };
+  const parab=(cs,sign,off,m)=>{ const p=[]; for(let i=-40;i<=40;i++){ const u=i/40*2.6; p.push(m(u,sign*(u*u)/(cs*cs)+off)); } return p; };
+  const pt=(m)=>[[m(0,0)]];
+  if(KIND==='ellipsoid'){
+    let rhs,rx,ry,m; if(axis==='z'){rhs=1-(k*k)/(c*c);rx=a;ry=b;m=mapZ;} else if(axis==='x'){rhs=1-(k*k)/(a*a);rx=b;ry=c;m=mapX;} else {rhs=1-(k*k)/(b*b);rx=a;ry=c;m=mapY;}
+    if(rhs>eps) curves=[ell(rx*Math.sqrt(rhs),ry*Math.sqrt(rhs),m)]; else if(Math.abs(rhs)<=eps) curves=pt(m);
+  } else if(KIND==='hyp1'){
+    if(axis==='z'){ const r=Math.sqrt(1+(k*k)/(c*c)); curves=[ell(a*r,b*r,mapZ)]; }
+    else if(axis==='x'){ const rhs=1-(k*k)/(a*a); curves=Math.abs(rhs)<eps?lines(c/b,(y,z)=>mapX(y,z)):[hyp(1,b,c,rhs,(y,z)=>mapX(y,z)),hyp(-1,b,c,rhs,(y,z)=>mapX(y,z))]; }
+    else { const rhs=1-(k*k)/(b*b); curves=Math.abs(rhs)<eps?lines(c/a,(x,z)=>mapY(x,z)):[hyp(1,a,c,rhs,(x,z)=>mapY(x,z)),hyp(-1,a,c,rhs,(x,z)=>mapY(x,z))]; }
+  } else if(KIND==='hyp2'){
+    if(axis==='z'){ const rhs=(k*k)/(c*c)-1; if(rhs>eps) curves=[ell(a*Math.sqrt(rhs),b*Math.sqrt(rhs),mapZ)]; else if(Math.abs(rhs)<=eps) curves=pt(mapZ); }
+    else if(axis==='x'){ const rhs=1+(k*k)/(a*a); curves=[hyp(1,c,b,rhs,(u,v)=>mapX(v,u)),hyp(-1,c,b,rhs,(u,v)=>mapX(v,u))]; }
+    else { const rhs=1+(k*k)/(b*b); curves=[hyp(1,c,a,rhs,(u,v)=>mapY(v,u)),hyp(-1,c,a,rhs,(u,v)=>mapY(v,u))]; }
+  } else if(KIND==='cone'){
+    if(axis==='z'){ const r=Math.abs(k)/c; curves=Math.abs(k)<eps?pt(mapZ):[ell(a*r,b*r,mapZ)]; }
+    else if(axis==='x'){ curves=Math.abs(k)<eps?lines(c/b,(y,z)=>mapX(y,z)):[hyp(1,c,b,(k*k)/(a*a),(u,v)=>mapX(v,u)),hyp(-1,c,b,(k*k)/(a*a),(u,v)=>mapX(v,u))]; }
+    else { curves=Math.abs(k)<eps?lines(c/a,(x,z)=>mapY(x,z)):[hyp(1,c,a,(k*k)/(b*b),(u,v)=>mapY(v,u)),hyp(-1,c,a,(k*k)/(b*b),(u,v)=>mapY(v,u))]; }
+  } else if(KIND==='ellparab'){
+    if(axis==='z'){ if(k>eps) curves=[ell(a*Math.sqrt(k),b*Math.sqrt(k),mapZ)]; else if(Math.abs(k)<=eps) curves=pt(mapZ); }
+    else if(axis==='x'){ curves=[parab(b,1,(k*k)/(a*a),(y,z)=>mapX(y,z))]; }
+    else { curves=[parab(a,1,(k*k)/(b*b),(x,z)=>mapY(x,z))]; }
+  } else if(KIND==='hypparab'){
+    if(axis==='z'){ if(Math.abs(k)<eps) curves=lines(b/a,(x,y)=>mapZ(x,y)); else { const br=(sign)=>{ const p=[]; if(k>0){ for(let i=-40;i<=40;i++){ const x=i/40*3.2; p.push(mapZ(x,sign*b*Math.sqrt(k+(x*x)/(a*a)))); } } else { for(let i=-40;i<=40;i++){ const y=i/40*3.2; p.push(mapZ(sign*a*Math.sqrt(-k+(y*y)/(b*b)),y)); } } return p; }; curves=[br(1),br(-1)]; } }
+    else if(axis==='x'){ curves=[parab(b,1,-(k*k)/(a*a),(y,z)=>mapX(y,z))]; }
+    else { curves=[parab(a,-1,(k*k)/(b*b),(x,z)=>mapY(x,z))]; }
+  }
+  return curves;
+}
+function buildTraceObject(curves){
+  const group=new THREE.Group();
+  curves.forEach(pts=>{ if(pts.length===1){ const s=new THREE.Mesh(new THREE.SphereGeometry(0.06,16,16),new THREE.MeshBasicMaterial({color:0xD64550})); s.position.copy(pts[0]); group.add(s); } else { group.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),new THREE.LineBasicMaterial({color:0xD64550,linewidth:2}))); } });
+  return group;
+}
+function buildPlane(axis,k){
+  const mesh=new THREE.Mesh(new THREE.PlaneGeometry(AX*2,AX*2),new THREE.MeshBasicMaterial({color:0xD9A514,transparent:true,opacity:0.12,side:THREE.DoubleSide}));
+  if(axis==='z') mesh.position.set(0,0,k); if(axis==='x'){ mesh.rotation.y=Math.PI/2; mesh.position.set(k,0,0); } if(axis==='y'){ mesh.rotation.x=Math.PI/2; mesh.position.set(0,k,0); }
+  return mesh;
+}
+let lastTraceCurves=[];
+function rebuildAll(){
+  readSliders(); updateTable();
+  const axis=axisSel.value, k=parseInt(kSlider.value)/100; kval.textContent=k.toFixed(2);
+  if(!mounted || !rig){ readout.innerHTML='Cutting at <b>'+axis+' = '+k.toFixed(2)+'</b>: the trace is <b>'+traceLabel(axis,k)+'</b>. (Load the model to see it.)'; return; }
+  if(surfGroup) rig.remove(surfGroup); if(planeMesh) rig.remove(planeMesh); if(traceObj) rig.remove(traceObj);
+  surfGroup=buildSurface(); rig.add(surfGroup);
+  planeMesh=buildPlane(axis,k); rig.add(planeMesh);
+  lastTraceCurves=traceCurves(axis,k); traceObj=buildTraceObject(lastTraceCurves); rig.add(traceObj);
+  readout.innerHTML='Cutting at <b>'+axis+' = '+k.toFixed(2)+'</b>: the trace is <b>'+traceLabel(axis,k)+'</b>.';
+}
+function resetAll(){ aS.value=16; bS.value=16; cS.value=16; kSlider.value=0; axisSel.value='z'; if(window.__applyRot){ window.__rotX=0.35; window.__rotY=-0.5; window.__applyRot(); } rebuildAll(); }
+[aS,bS,cS,kSlider].forEach(el=>el.addEventListener('input',rebuildAll));
+axisSel.addEventListener('change',rebuildAll);
+$('resetBtn').addEventListener('click',resetAll);
+$('loadBtn').addEventListener('click',mount);
+if(AUTOLOAD) mount();
+
+// ---- acceptance-test hook (no UI) ----
+window.__debug=function(){
+  let maxRes=0; samplePts.forEach(p=>{ maxRes=Math.max(maxRes,Math.abs(implicitResidual(p))); });
+  let maxTraceRes=0, nTracePts=0; const axis=axisSel.value, k=parseInt(kSlider.value)/100;
+  lastTraceCurves.forEach(pts=>pts.forEach(p=>{ nTracePts++; const onPlane=Math.abs((axis==='z'?p.z:axis==='x'?p.x:p.y)-k); maxTraceRes=Math.max(maxTraceRes,Math.abs(implicitResidual(p)),onPlane); }));
+  return {kind:KIND,mounted,a,b,c,axis,k,label:traceLabel(axis,k),nSurfaceSamples:samplePts.length,maxSurfaceResidual:maxRes,nTracePts,maxTraceResidual:maxTraceRes,hasCanvas:!!document.querySelector('canvas'),rotX:window.__rotX,rotY:window.__rotY};
+};
+</script>
+</body>
+</html>

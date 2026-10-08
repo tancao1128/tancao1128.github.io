@@ -1,0 +1,70 @@
+# Card metadata for /projects/. Keys are the file names in _projects/ without ".md".
+# level: 1 = intro, 2 = core, 3 = advanced (undergraduate projects only).
+
+1_sweeping-processes:
+  status: Active program
+  tags: [Optimal control, Nonconvex sweeping, Discrete approximation]
+  note: Papers in J. Differential Equations, DCDS-B, IEEE Control Syst. Lett., JOTA; Nonlinear Anal. Hybrid Syst. (accepted, 2026)
+2_catching-up:
+  status: Submitted, 2026
+  tags: [Catching-up algorithm, Maximal monotone operators, Error bounds]
+  note: Joint work with Hassan Saoud
+3_crowd-motion:
+  status: Applications
+  tags: [Crowd motion, Marine vehicles, Free-time control]
+  note: With B. S. Mordukhovich, G. Colombo and coauthors
+
+4_ug-python-control:
+  track: control
+  level: 1
+  time: 1 semester
+  prereq: Calculus, basic ODEs, Python
+5_ug-rl-evacuation:
+  track: learning
+  level: 2
+  time: 1 semester
+  prereq: Python, probability, linear algebra
+6_ug-marine-control:
+  track: control
+  level: 2
+  time: 1 semester
+  prereq: ODEs, Python
+7_ug-portfolio-rl:
+  track: learning
+  level: 2
+  time: 4–6 week trial, then a semester
+  prereq: Calculus, linear algebra, probability and statistics, Python
+8_ug-numerical-analysis:
+  track: numerics
+  level: 2
+  time: ½–1 semester
+  prereq: Numerical analysis, Python
+9_ug-bouncing-ball:
+  track: numerics
+  level: 1
+  time: 4–6 week trial, then a semester
+  prereq: Multivariable calculus, linear algebra, Python
+10_ug-pontryagin:
+  track: control
+  level: 2
+  time: 1 semester
+  prereq: Multivariable calculus, Python
+11_ug-gridworld-crowd:
+  track: learning
+  level: 2
+  time: 1 semester
+  prereq: Probability, linear algebra, Python
+12_ug-flow-matching:
+  track: learning
+  level: 3
+  time: 1 semester
+  prereq: Multivariable calculus, ODEs, probability, Python
+
+levels:
+  1: Intro
+  2: Core
+  3: Advanced
+tracks:
+  control: Control and optimization
+  learning: Learning and RL
+  numerics: Numerics and dynamics

@@ -20,7 +20,7 @@ We study a catching-up scheme for differential inclusions driven by **maximal mo
 - Asymptotic feasibility of the predictor step in an $L^2$ sense and a Cesàro-averaged feasibility property.
 - Explicit examples: a one-dimensional test case and a multidimensional dry-friction system.
 
-📄 **Status:** submitted to *Applied Mathematics and Optimization* (2026).
+📄 **Status:** submitted to *Optimization* (2026).
 
 ### Related research
 

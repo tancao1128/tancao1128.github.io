@@ -48,7 +48,7 @@ I received my Ph.D. in Applied Mathematics from **Wayne State University** (Detr
 ### Research Grants
 
 - **NRF 기본연구 (2020–2023)** — Principal Investigator, _National Research Foundation of Korea_. Project: _Optimal Control of the Sweeping Process and Its Applications_. Total budget: 165,000,000 KRW.
-- **IGC SEED Grant (2026)** — Principal Investigator, _IGC SEED Program_. Awarded October 2026. Total budget: 20,000,000 KRW.
+- **IGC SEED Program (2026)** — Principal Investigator, _SUNY Korea_. Awarded October 2026. Total budget: 20,000,000 KRW.
 
 ### Service
 

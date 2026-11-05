@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-🌱 Awarded an **IGC SEED Grant (2026)** as Principal Investigator, supporting undergraduate research on sweeping processes and crowd models.
+🌱 Awarded funding from the **IGC SEED Program (2026)** as Principal Investigator, supporting undergraduate research on sweeping processes and crowd models.

@@ -47,12 +47,12 @@ I received my Ph.D. in Applied Mathematics from **Wayne State University** (Detr
 
 ### Research Grants
 
-- **NRF 기본연구 (2020–2023)** — Principal Investigator, *National Research Foundation of Korea*. Project: *Optimal Control of the Sweeping Process and Its Applications*. Total budget: 165,000,000 KRW.
-- **NRF 기본연구B (2026–2030)** — Applied; under review, *National Research Foundation of Korea*.
+- **NRF 기본연구 (2020–2023)** — Principal Investigator, _National Research Foundation of Korea_. Project: _Optimal Control of the Sweeping Process and Its Applications_. Total budget: 165,000,000 KRW.
+- **IGC SEED Grant (2026)** — Principal Investigator, _IGC SEED Program_. Awarded October 2026. Total budget: 20,000,000 KRW.
 
 ### Service
 
-I serve as a reviewer for several international journals in optimization, control, and applied mathematics, including *Journal of Optimization Theory and Applications*, *Applied Mathematics & Optimization*, *Set-Valued Analysis*, *Journal of Global Optimization*, *Optimization Letters*, *Applied Mathematical Modelling*, *Evolution Equations and Control Theory*, *Nonlinear Differential Equations and Applications*, *Numerical Algorithms*, and *Acta Mathematica Scientia*.
+I serve as a reviewer for several international journals in optimization, control, and applied mathematics, including _Journal of Optimization Theory and Applications_, _Applied Mathematics & Optimization_, _Set-Valued Analysis_, _Journal of Global Optimization_, _Optimization Letters_, _Applied Mathematical Modelling_, _Evolution Equations and Control Theory_, _Nonlinear Differential Equations and Applications_, _Numerical Algorithms_, and _Acta Mathematica Scientia_.
 
 ---
 

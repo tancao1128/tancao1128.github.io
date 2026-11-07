@@ -1,0 +1,18 @@
+{
+  "enabledPlugins": {
+    "tableau@synced": false,
+    "mintlify@synced": false,
+    "chrome-extension-builder@synced": false,
+    "ag2-workflow-patterns@synced": false,
+    "clickhouse@synced": false,
+    "atlan@synced": false,
+    "datarobot-agent-skills@synced": false,
+    "desktop-commander@synced": false,
+    "design@synced": false,
+    "data@synced": false,
+    "productivity@synced": false,
+    "engineering@synced": false,
+    "writing-skills@synced": false,
+    "cowork-plugin-management@synced": false
+  }
+}
